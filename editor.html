@@ -7,6 +7,7 @@
   <title>Ursa Bar | Editor do cardápio</title>
   <link rel="stylesheet" href="editor.css">
   <script src="menu-data.js" defer></script>
+  <script src="editor-storage.js" defer></script>
   <script src="editor.js" defer></script>
 </head>
 <body>
@@ -15,20 +16,30 @@
     <h1>Editor do cardápio <small>1.0</small></h1>
     <p>Edite os produtos, salve cada edição e exporte o arquivo ao terminar.</p>
     <a href="./index.html" target="_blank" rel="noopener">Abrir cardápio público ↗</a>
-    <aside class="notice"><strong>Editor local, sem autenticação.</strong> Qualquer pessoa pode abrir esta página e editar sua própria cópia. As alterações ficam neste navegador durante esta sessão e não mudam o site automaticamente. Não insira senhas ou tokens. Para publicar, exporte o JSON e peça a uma pessoa autorizada para atualizar o arquivo no GitHub.</aside>
+    <aside class="notice"><strong>Editor local, sem autenticação.</strong> Qualquer pessoa pode abrir esta página e editar sua própria cópia. As alterações são salvas automaticamente neste navegador e dispositivo, sem mudar o site público. Não insira senhas ou tokens. Para publicar, exporte o JSON e peça a uma pessoa autorizada para atualizar o arquivo no GitHub.</aside>
   </header>
   <main class="container">
     <p id="message" role="status" aria-live="polite">Carregando cardápio…</p>
     <noscript>Ative o JavaScript para usar o editor.</noscript>
+    <p id="local-status" class="notice" role="status" aria-live="polite">Verificando o rascunho deste dispositivo…</p>
+    <section id="recovery" class="panel" aria-labelledby="recovery-title" hidden>
+      <h2 id="recovery-title">Há um trabalho salvo neste dispositivo</h2>
+      <p id="recovery-message"></p>
+      <div class="actions">
+        <button type="button" id="recover-draft" class="primary">Recuperar rascunho</button>
+        <button type="button" id="load-published">Carregar versão publicada</button>
+      </div>
+    </section>
     <fieldset id="workspace" disabled>
       <legend class="sr-only">Edição do cardápio</legend>
       <div class="toolbar">
         <button type="button" id="export" class="primary">Exportar cardapio.json</button>
         <label class="file-label" for="import">Importar JSON<input id="import" type="file" accept=".json,application/json"></label>
         <button type="button" id="new-product">Novo produto</button>
+        <button type="button" id="discard-local" class="danger">Descartar alterações locais</button>
       </div>
       <p id="dirty" class="notice" role="status">Nenhuma alteração pendente de exportação.</p>
-      <p class="hint">“Salvar produto” guarda a edição nesta sessão. “Exportar” baixa todos os produtos e categorias. Confira o arquivo na pasta Downloads antes de fechar. Recarregar ou fechar esta página descarta os dados da sessão.</p>
+      <p class="hint">Seu rascunho é salvo automaticamente neste dispositivo, inclusive o formulário em preenchimento. Use “Salvar produto” para aplicar o formulário à lista. “Exportar” baixa o JSON para publicação no GitHub; não publica nem apaga o rascunho. Mantenha uma cópia exportada como backup.</p>
       <div class="layout">
         <div>
           <label for="search">Buscar por nome</label>

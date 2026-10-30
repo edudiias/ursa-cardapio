@@ -158,7 +158,7 @@ test('editor e cardápio em navegador real', { timeout: 180000 }, async t => {
         window.dispatchEvent(event);
         return event.defaultPrevented;
       });
-      assert.equal(protectedNavigation, true);
+      assert.equal(protectedNavigation, false, 'o rascunho persistido permite atualizar sem perder dados');
       await page.screenshot({ fullPage: true, path: path.join(outputDir, 'editor-desktop.png') });
       await page.close();
     });
@@ -184,7 +184,8 @@ test('editor e cardápio em navegador real', { timeout: 180000 }, async t => {
     });
 
     await t.test('falhas de carregamento são visíveis e editor recupera por importação', async () => {
-      const page = await context.newPage();
+      const isolated = await browser.newContext();
+      const page = await isolated.newPage();
       page.on('dialog', dialog => dialog.accept());
       await page.route('**/cardapio.json', route => route.fulfill({ status: 404, body: 'Não encontrado' }));
       await page.goto(url);
@@ -198,7 +199,7 @@ test('editor e cardápio em navegador real', { timeout: 180000 }, async t => {
       await page.locator('.product').last().waitFor();
       assert.equal(await page.locator('.product').count(), 54);
       assert.equal(await page.locator('#export').isEnabled(), true);
-      await page.close();
+      await isolated.close();
     });
 
     await t.test('celular: sem rolagem horizontal, formulário e exportação funcionam', async () => {
