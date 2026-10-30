@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#151515">
+  <title>Ursa Bar | Editor do cardápio</title>
+  <link rel="stylesheet" href="editor.css">
+  <script src="menu-data.js" defer></script>
+  <script src="editor.js" defer></script>
+</head>
+<body>
+  <header class="container">
+    <span class="brand">URSA</span>
+    <h1>Editor do cardápio <small>1.0</small></h1>
+    <p>Edite os produtos, salve cada edição e exporte o arquivo ao terminar.</p>
+    <a href="./index.html" target="_blank" rel="noopener">Abrir cardápio público ↗</a>
+    <aside class="notice"><strong>Editor local, sem autenticação.</strong> Qualquer pessoa pode abrir esta página e editar sua própria cópia. As alterações ficam neste navegador durante esta sessão e não mudam o site automaticamente. Não insira senhas ou tokens. Para publicar, exporte o JSON e peça a uma pessoa autorizada para atualizar o arquivo no GitHub.</aside>
+  </header>
+  <main class="container">
+    <p id="message" role="status" aria-live="polite">Carregando cardápio…</p>
+    <noscript>Ative o JavaScript para usar o editor.</noscript>
+    <fieldset id="workspace" disabled>
+      <legend class="sr-only">Edição do cardápio</legend>
+      <div class="toolbar">
+        <button type="button" id="export" class="primary">Exportar cardapio.json</button>
+        <label class="file-label" for="import">Importar JSON<input id="import" type="file" accept=".json,application/json"></label>
+        <button type="button" id="new-product">Novo produto</button>
+      </div>
+      <p id="dirty" class="notice" role="status">Nenhuma alteração pendente de exportação.</p>
+      <p class="hint">“Salvar produto” guarda a edição nesta sessão. “Exportar” baixa todos os produtos e categorias. Confira o arquivo na pasta Downloads antes de fechar. Recarregar ou fechar esta página descarta os dados da sessão.</p>
+      <div class="layout">
+        <div>
+          <label for="search">Buscar por nome</label>
+          <input id="search" type="search" placeholder="Ex.: Gin Tônica">
+          <p id="count" class="hint"></p>
+          <div id="product-list"></div>
+        </div>
+        <div>
+          <section class="panel" aria-labelledby="form-title">
+            <h2 id="form-title">Novo produto</h2>
+            <form id="product-form">
+              <label for="name">Nome *</label>
+              <input id="name" name="nome" required>
+              <label for="category">Categoria *</label>
+              <select id="category" name="categoria" required></select>
+              <label for="price">Preço (R$) *</label>
+              <input id="price" name="preco" type="text" inputmode="decimal" placeholder="28,00" required aria-describedby="price-help">
+              <p id="price-help" class="hint">Use 28,00 ou 28.00, sem valores negativos.</p>
+              <label class="check"><input id="consult" type="checkbox"> Sem preço definido (mostrar “Consulte”)</label>
+              <label for="description">Descrição</label>
+              <textarea id="description" name="descricao" rows="4"></textarea>
+              <label class="check"><input id="active" type="checkbox" checked> Produto ativo no cardápio público</label>
+              <div class="actions">
+                <button type="submit" class="primary">Salvar produto</button>
+                <button type="button" id="cancel">Limpar / cancelar</button>
+              </div>
+              <p id="form-error" role="alert"></p>
+            </form>
+          </section>
+          <section class="panel" aria-labelledby="categories-title">
+            <h2 id="categories-title">Categorias</h2>
+            <p class="hint">Use ↑ e ↓ para organizar a ordem do cardápio. Renomear atualiza também os produtos. Só é possível excluir categorias vazias.</p>
+            <form id="category-form">
+              <label for="new-category">Nova categoria *</label>
+              <div class="actions"><input id="new-category" required><button type="submit">Adicionar</button></div>
+            </form>
+            <ol id="category-list"></ol>
+          </section>
+        </div>
+      </div>
+    </fieldset>
+  </main>
+  <footer class="container">Ursa Bar · O endereço público e o QR Code continuam os mesmos.</footer>
+</body>
+</html>
