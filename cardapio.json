@@ -2,7 +2,7 @@
   "versao": 1,
   "categorias": [
     "NOVIDADES",
-    "MATINÉ",
+    "MATINÉ ATÉ AS 20H!",
     "DRINKS AUTORAIS",
     "DRINKS CLÁSSICOS",
     "CAIPIRINHAS",
@@ -21,7 +21,7 @@
       "id": "produto-001",
       "categoria": "NOVIDADES",
       "nome": "EMPANADA",
-      "descricao": "Empanada estilo Argentina com massa feita com farinha de trigo e banha. Recheada com carne picada...",
+      "descricao": "Empanada estilo Argentina com massa feita com farinha de trigo e banha. Recheada com carne picada na ponta da faca, Sofrito, vinho e uvas passas.\nAcompanha Chimichurri da casa",
       "preco": "R$ 18,00",
       "ativo": true
     },
@@ -37,7 +37,7 @@
       "id": "produto-003",
       "categoria": "NOVIDADES",
       "nome": "Hamburguesa",
-      "descricao": "Blend artesanal de 130g de carne bovina feito na casa, queijo cheddar e pão brioche. Acom...",
+      "descricao": "Blend artesanal de 130g de carne bovina feito na casa, queijo cheddar e pão brioche. Acompanha ketchup, mostarda e picles de pepino também produzidos artesanalmente na casa, além de cebola roxa e tomate.",
       "preco": "R$ 38,00",
       "ativo": true
     },
@@ -45,7 +45,7 @@
       "id": "produto-004",
       "categoria": "NOVIDADES",
       "nome": "PARMEGIANA PETISCO",
-      "descricao": "Parmegiana de carne com molho de tomate da casa e queijo mussarela gratinado. Acompanha fritas da...",
+      "descricao": "Parmegiana de carne com molho de tomate da casa e queijo mussarela gratinado. Acompanha fritas da casa.",
       "preco": "R$ 60,00",
       "ativo": true
     },
@@ -61,7 +61,7 @@
       "id": "produto-006",
       "categoria": "NOVIDADES",
       "nome": "Torresmo da casa",
-      "descricao": "Barriga de porco assada em baixa temperatura, depois frita em imersão, suculenta e com pele croca...",
+      "descricao": "Barriga de porco assada em baixa temperatura, depois frita em imersão, suculenta e com pele crocante",
       "preco": "R$ 34,00",
       "ativo": true
     },
@@ -75,7 +75,7 @@
     },
     {
       "id": "produto-008",
-      "categoria": "MATINÉ",
+      "categoria": "MATINÉ ATÉ AS 20H!",
       "nome": "CALDINHOS POR R$13",
       "descricao": "Tomate Feijoada",
       "preco": "R$ 13,00",
@@ -83,7 +83,7 @@
     },
     {
       "id": "produto-009",
-      "categoria": "MATINÉ",
+      "categoria": "MATINÉ ATÉ AS 20H!",
       "nome": "Batata frita de verdade",
       "descricao": "Tradicional batata frita da casa, com paprica, acompanha ketchup da casa",
       "preco": "R$ 24,00",
@@ -91,15 +91,15 @@
     },
     {
       "id": "produto-010",
-      "categoria": "MATINÉ",
+      "categoria": "MATINÉ ATÉ AS 20H!",
       "nome": "Hamburguesa",
-      "descricao": "blend artesanal de 130g, queijo cheddar, pão amanteigado, ketchup da casa, mostarda da casa, picl...",
+      "descricao": "Blend artesanal de 130g de carne bovina feito na casa, queijo cheddar e pão brioche. Acompanha ketchup, mostarda e picles de pepino também produzidos artesanalmente na casa, além de cebola roxa e tomate.",
       "preco": "R$ 29,00",
       "ativo": true
     },
     {
       "id": "produto-011",
-      "categoria": "MATINÉ",
+      "categoria": "MATINÉ ATÉ AS 20H!",
       "nome": "CAIPIRINHA LIMÃO",
       "descricao": "",
       "preco": "R$ 16,00",
@@ -107,7 +107,7 @@
     },
     {
       "id": "produto-012",
-      "categoria": "MATINÉ",
+      "categoria": "MATINÉ ATÉ AS 20H!",
       "nome": "GIN TÔNICA",
       "descricao": "",
       "preco": "R$ 20,00",
@@ -115,7 +115,7 @@
     },
     {
       "id": "produto-013",
-      "categoria": "MATINÉ",
+      "categoria": "MATINÉ ATÉ AS 20H!",
       "nome": "MOSCOW MULE",
       "descricao": "",
       "preco": "R$ 20,00",
@@ -123,7 +123,7 @@
     },
     {
       "id": "produto-014",
-      "categoria": "MATINÉ",
+      "categoria": "MATINÉ ATÉ AS 20H!",
       "nome": "CROQUETAS",
       "descricao": "Consultar disponíveis",
       "preco": "R$ 15,00",
@@ -131,9 +131,9 @@
     },
     {
       "id": "produto-015",
-      "categoria": "MATINÉ",
+      "categoria": "MATINÉ ATÉ AS 20H!",
       "nome": "PARMEGIANA PETISCO",
-      "descricao": "Parmegiana de carne com molho de tomate da casa e queijo mussarela gratinado. Acompanha fritas da...",
+      "descricao": "Parmegiana de carne com molho de tomate da casa e queijo mussarela gratinado. Acompanha fritas da casa",
       "preco": "R$ 48,00",
       "ativo": true
     },
@@ -451,3 +451,4 @@
     }
   ]
 }
+
