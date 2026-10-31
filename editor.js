@@ -15,6 +15,7 @@
   let persisted = false;
   let editingId = null;
   let formBaseline = '';
+  let publication = null;
   const serialize = () => JSON.stringify(menu);
   const formValues = () => JSON.stringify({ nome: $('name').value, categoria: $('category').value,
     preco: $('price').value, descricao: $('description').value, ativo: $('active').checked,
@@ -28,10 +29,10 @@
     // If a draft could not be read, never overwrite that unknown work.
     if (readBlocked) { storageError = true; persisted = false; return; }
     try {
-      if (hasLocalWork()) {
+      if (hasLocalWork() || publication) {
         store.write({ versao: 1, menu, publishedBase, exported: baseline ? JSON.parse(baseline) : null,
           form: { editingId, values: JSON.parse(formValues()), baseline: JSON.parse(formBaseline) },
-          newCategory: $('new-category').value });
+          newCategory: $('new-category').value, ...(publication ? { publication } : {}) });
       } else store.remove();
       storageError = false;
       persisted = true;
@@ -47,7 +48,8 @@
       ? 'Não foi possível salvar neste dispositivo. Exporte um backup antes de atualizar ou fechar a página; as últimas alterações podem ser perdidas.'
       : hasLocalWork()
         ? 'Alterações salvas neste dispositivo — publicação pendente'
-        : 'Versão publicada carregada. Nenhuma alteração local pendente.';
+        : publication ? 'Alterações salvas neste dispositivo — commit confirmado; GitHub Pages pode estar atualizando.'
+          : 'Versão publicada carregada. Nenhuma alteração local pendente.';
     $('local-status').setAttribute('role', storageError ? 'alert' : 'status');
     $('local-status').classList.toggle('pending', storageError || hasLocalWork());
   }
@@ -331,7 +333,7 @@
 
   window.addEventListener('beforeunload', event => {
     // A persisted draft survives reloads. Warn only when device storage failed.
-    if (hasLocalWork() && !persisted) { event.preventDefault(); event.returnValue = ''; }
+    if (hasLocalWork() && !persisted || publisher.isPublishing()) { event.preventDefault(); event.returnValue = ''; }
   });
 
   function activate(data, draft = null) {
@@ -378,7 +380,7 @@
   $('recover-draft').onclick = () => {
     if (!pendingDraft) return;
     // Acknowledge this published version so the same conflict is not asked on every reload.
-    publishedBase = publishedMenu || pendingDraft.publishedBase;
+    publishedBase = publication ? pendingDraft.publishedBase : publishedMenu || pendingDraft.publishedBase;
     activate(pendingDraft.menu, pendingDraft);
     pendingDraft = null;
     message('Rascunho recuperado. A versão publicada não foi alterada. Revise antes de exportar.');
@@ -390,6 +392,7 @@
     publishedMenu = data;
     publishedBase = data;
     readBlocked = false;
+    publication = null;
     pendingDraft = null;
     $('search').value = '';
     activate(data);
@@ -426,8 +429,12 @@
       return;
     }
     if (draft) {
+      publication = draft.publication || null;
+      if (publication && publishedMenu && JSON.stringify(publishedMenu) === JSON.stringify(draft.publishedBase)) publication = null;
       if (publishedMenu && JSON.stringify(publishedMenu) !== JSON.stringify(draft.publishedBase)) {
-        recovery(draft, 'Há uma nova versão de cardapio.json no site. Seu rascunho não foi sobrescrito. Recupere seu trabalho ou escolha carregar a versão publicada, descartando o rascunho local.', true);
+        recovery(draft, publication
+          ? 'Um commit já foi confirmado, mas o site ainda exibe outra versão. O GitHub Pages pode estar atualizando. Recupere seu rascunho para manter os dados do commit ou escolha carregar a versão exibida no site.'
+          : 'Há uma nova versão de cardapio.json no site. Seu rascunho não foi sobrescrito. Recupere seu trabalho ou escolha carregar a versão publicada, descartando o rascunho local.', true);
         return;
       }
       publishedBase = draft.publishedBase;
@@ -448,5 +455,37 @@
     $('local-status').textContent = readBlocked ? 'Não foi possível ler o armazenamento deste dispositivo. Importe um backup para editar e exportar.' : 'Nenhum rascunho encontrado neste dispositivo.';
     message('Não foi possível carregar cardapio.json. Recarregue a página ou importe um arquivo válido. Para abrir no computador, use um servidor local conforme o README.', true);
   }
+  const publisher = UrsaPublish.create({
+    prepare() {
+      if (!menu || $('workspace').disabled || !publishedBase) { message('Carregue ou recupere um cardápio antes de publicar.', true); return null; }
+      if ($('new-category').value !== '') { message('Adicione ou limpe a nova categoria antes de publicar.', true); return null; }
+      if (formChanged() && !saveProduct(false)) { message('Corrija os campos do produto antes de publicar.', true); return null; }
+      return { menu: validateMenu(menu), baseMenu: validateMenu(publishedBase) };
+    },
+    conflict(data) {
+      try {
+        const latest = validateMenu(data);
+        // Capture current memory too, even if localStorage is temporarily unavailable.
+        const draft = { versao: 1, menu: validateMenu(menu), publishedBase, exported: baseline ? JSON.parse(baseline) : null,
+          form: { editingId, values: JSON.parse(formValues()), baseline: JSON.parse(formBaseline) },
+          newCategory: $('new-category').value };
+        publishedMenu = latest;
+        publication = null;
+        recovery(draft, 'O cardápio em main mudou. Recupere seu rascunho para revisá-lo sobre a nova versão, ou carregue a versão atual do GitHub. Nada foi publicado.', true);
+        $('recovery').scrollIntoView({ behavior: 'smooth' });
+      } catch { message('Não foi possível abrir a versão remota. O rascunho foi mantido.', true); }
+    },
+    published(sent, result) {
+      if (!result || !/^[a-f0-9]{40}$/.test(result.sha || '') || (!result.unchanged && !/^[a-f0-9]{40}$/.test(result.commit || ''))) {
+        message('A confirmação do GitHub está incompleta. O rascunho foi mantido; verifique o histórico.', true); return;
+      }
+      publishedBase = validateMenu(sent);
+      publishedMenu = validateMenu(sent);
+      baseline = JSON.stringify(sent);
+      publication = { sha: result.sha, commit: result.commit || null };
+      updateDirty();
+      message(result.unchanged ? 'Este cardápio já está no GitHub. O GitHub Pages pode estar atualizando.' : `Commit ${result.commit.slice(0, 7)} criado. O GitHub Pages ainda poderá estar atualizando.`);
+    }
+  });
   initialize();
 })();

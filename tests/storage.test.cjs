@@ -72,3 +72,13 @@ test('falhas de leitura, quota e descarte são expostas ao editor, sem alegar su
   assert.throws(() => limited.write(fixture()), /Quota/);
   assert.equal(storage.getItem(limited.key), previous);
 });
+
+test('confirmação de publicação sobrevive sem alterar o formato de rascunhos antigos', () => {
+  const draft = fixture();
+  draft.publication = { sha: 'a'.repeat(40), commit: 'b'.repeat(40) };
+  assert.deepEqual(validateDraft(draft).publication, draft.publication);
+  draft.publication.commit = null;
+  assert.equal(validateDraft(draft).publication.commit, null);
+  draft.publication.sha = 'invalid';
+  assert.throws(() => validateDraft(draft));
+});
