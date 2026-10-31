@@ -1,0 +1,453 @@
+{
+  "versao": 1,
+  "categorias": [
+    "NOVIDADES",
+    "MATINÉ",
+    "DRINKS AUTORAIS",
+    "DRINKS CLÁSSICOS",
+    "CAIPIRINHAS",
+    "CAIPIROSCAS",
+    "DOSES",
+    "SEM ÁLCOOL",
+    "BEBIDAS",
+    "CALDINHOS – onde tudo começa",
+    "NOSSAS CROQUETAS",
+    "BATATA FRITA",
+    "PANELINHAS",
+    "SANDUÍCHES"
+  ],
+  "produtos": [
+    {
+      "id": "produto-001",
+      "categoria": "NOVIDADES",
+      "nome": "EMPANADA",
+      "descricao": "Empanada estilo Argentina com massa feita com farinha de trigo e banha. Recheada com carne picada...",
+      "preco": "R$ 18,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-002",
+      "categoria": "NOVIDADES",
+      "nome": "MEIA LUA",
+      "descricao": "Gin infusionado em hibisco, sumo de limão, xarope de açúcar e agua tônica.",
+      "preco": "R$ 28,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-003",
+      "categoria": "NOVIDADES",
+      "nome": "Hamburguesa",
+      "descricao": "Blend artesanal de 130g de carne bovina feito na casa, queijo cheddar e pão brioche. Acom...",
+      "preco": "R$ 38,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-004",
+      "categoria": "NOVIDADES",
+      "nome": "PARMEGIANA PETISCO",
+      "descricao": "Parmegiana de carne com molho de tomate da casa e queijo mussarela gratinado. Acompanha fritas da...",
+      "preco": "R$ 60,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-005",
+      "categoria": "NOVIDADES",
+      "nome": "Ursa Tropical",
+      "descricao": "Gin, Cointreu, sumo de maracujá, sumo de laranja e cacanela.",
+      "preco": "R$ 33,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-006",
+      "categoria": "NOVIDADES",
+      "nome": "Torresmo da casa",
+      "descricao": "Barriga de porco assada em baixa temperatura, depois frita em imersão, suculenta e com pele croca...",
+      "preco": "R$ 34,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-007",
+      "categoria": "NOVIDADES",
+      "nome": "Dupla de pasteis",
+      "descricao": "2 pastéis, sabor creme de milho com mussarela e gorgonzola.",
+      "preco": "R$ 18,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-008",
+      "categoria": "MATINÉ",
+      "nome": "CALDINHOS POR R$13",
+      "descricao": "Tomate Feijoada",
+      "preco": "R$ 13,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-009",
+      "categoria": "MATINÉ",
+      "nome": "Batata frita de verdade",
+      "descricao": "Tradicional batata frita da casa, com paprica, acompanha ketchup da casa",
+      "preco": "R$ 24,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-010",
+      "categoria": "MATINÉ",
+      "nome": "Hamburguesa",
+      "descricao": "blend artesanal de 130g, queijo cheddar, pão amanteigado, ketchup da casa, mostarda da casa, picl...",
+      "preco": "R$ 29,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-011",
+      "categoria": "MATINÉ",
+      "nome": "CAIPIRINHA LIMÃO",
+      "descricao": "",
+      "preco": "R$ 16,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-012",
+      "categoria": "MATINÉ",
+      "nome": "GIN TÔNICA",
+      "descricao": "",
+      "preco": "R$ 20,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-013",
+      "categoria": "MATINÉ",
+      "nome": "MOSCOW MULE",
+      "descricao": "",
+      "preco": "R$ 20,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-014",
+      "categoria": "MATINÉ",
+      "nome": "CROQUETAS",
+      "descricao": "Consultar disponíveis",
+      "preco": "R$ 15,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-015",
+      "categoria": "MATINÉ",
+      "nome": "PARMEGIANA PETISCO",
+      "descricao": "Parmegiana de carne com molho de tomate da casa e queijo mussarela gratinado. Acompanha fritas da...",
+      "preco": "R$ 48,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-016",
+      "categoria": "DRINKS AUTORAIS",
+      "nome": "Tigresa",
+      "descricao": "Gin Orloff, Aperol, Martini extra Dry, fambroesa e agua tonica. ...",
+      "preco": "R$ 33,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-017",
+      "categoria": "DRINKS AUTORAIS",
+      "nome": "Loba",
+      "descricao": "Tequila José Cuervo, licor de pimenta, redução de maracujá, Cointreau, sumo de limão e ve...",
+      "preco": "R$ 30,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-018",
+      "categoria": "DRINKS AUTORAIS",
+      "nome": "Doce Vampira",
+      "descricao": "Gin Gordon's inf. com hibisco, licor de framboesa, vermouth rosato, espuma cítrica.",
+      "preco": "R$ 30,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-019",
+      "categoria": "DRINKS AUTORAIS",
+      "nome": "Leona",
+      "descricao": "Vodka, redução de frutas vermelhas, sumo de limão taiti e espuma cítrica. ...",
+      "preco": "R$ 30,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-020",
+      "categoria": "DRINKS AUTORAIS",
+      "nome": "Drink Autoral",
+      "descricao": "Criação da casa.",
+      "preco": "R$ 30,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-021",
+      "categoria": "DRINKS AUTORAIS",
+      "nome": "Escolha destilado premium",
+      "descricao": "Para drinks com vodka Absolut (importada), acrescentamos $ 4 Para drinks com gin Gor...",
+      "preco": "",
+      "ativo": true
+    },
+    {
+      "id": "produto-022",
+      "categoria": "DRINKS CLÁSSICOS",
+      "nome": "Gin Tônica",
+      "descricao": "Gin Orloff, água tônica, limão siciliano e alecrim.",
+      "preco": "R$ 26,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-023",
+      "categoria": "DRINKS CLÁSSICOS",
+      "nome": "Mojito",
+      "descricao": "Rum Bacardi, sumo de limão, xarope simples e hortelã.",
+      "preco": "R$ 26,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-024",
+      "categoria": "DRINKS CLÁSSICOS",
+      "nome": "Negroni",
+      "descricao": "Gin Orloff, vermouth Martini rosso e bitter Campari.",
+      "preco": "R$ 32,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-025",
+      "categoria": "DRINKS CLÁSSICOS",
+      "nome": "Dry Martini",
+      "descricao": "Gin Orloff, vermouth seco, azeitona na clássica taça Martini.",
+      "preco": "R$ 32,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-026",
+      "categoria": "CAIPIRINHAS",
+      "nome": "Caipirinha Tradicional",
+      "descricao": "Cachaça, limão taiti e xarope de açúcar",
+      "preco": "R$ 24,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-027",
+      "categoria": "CAIPIRINHAS",
+      "nome": "Caipirinha Citrus",
+      "descricao": "Cachaça, limões siciliano e taiti e laranja bahia",
+      "preco": "R$ 26,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-028",
+      "categoria": "CAIPIRINHAS",
+      "nome": "Caipirinha de fruta",
+      "descricao": "Consultar frutas disponíveis.",
+      "preco": "R$ 26,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-029",
+      "categoria": "CAIPIRINHAS",
+      "nome": "Caipirinha Tropical",
+      "descricao": "Cachaça, caju e limão taiti.",
+      "preco": "R$ 26,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-030",
+      "categoria": "CAIPIROSCAS",
+      "nome": "Caipirosca tradicional",
+      "descricao": "Vodka, xarope de açúcar e limão taiti",
+      "preco": "R$ 26,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-031",
+      "categoria": "CAIPIROSCAS",
+      "nome": "Caipirosca citrus",
+      "descricao": "Vodka, limões siciliano e taiti e laranja bahia",
+      "preco": "R$ 28,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-032",
+      "categoria": "CAIPIROSCAS",
+      "nome": "Caipirosca de fruta",
+      "descricao": "Consultar frutas disponíveis.",
+      "preco": "R$ 28,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-033",
+      "categoria": "CAIPIROSCAS",
+      "nome": "Caipirosca Tropical",
+      "descricao": "Vodka ,maracujá e gengibre.",
+      "preco": "R$ 28,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-034",
+      "categoria": "DOSES",
+      "nome": "Jack Daniel's american whiskey",
+      "descricao": "",
+      "preco": "R$ 19,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-035",
+      "categoria": "DOSES",
+      "nome": "Jack Daniel's Honey",
+      "descricao": "Saborizado com licor de mel.",
+      "preco": "R$ 19,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-036",
+      "categoria": "DOSES",
+      "nome": "Jack Daniel's Fire",
+      "descricao": "Saborizado com licor de canela.",
+      "preco": "R$ 19,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-037",
+      "categoria": "DOSES",
+      "nome": "Jack Daniel's Apple",
+      "descricao": "Saborizado com licor de maçã verde.",
+      "preco": "R$ 19,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-038",
+      "categoria": "DOSES",
+      "nome": "Cachaça de Jambu",
+      "descricao": "",
+      "preco": "R$ 12,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-039",
+      "categoria": "DOSES",
+      "nome": "Vodka Smirnoff",
+      "descricao": "",
+      "preco": "R$ 13,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-040",
+      "categoria": "DOSES",
+      "nome": "Gin",
+      "descricao": "Gordon's ou Larios.",
+      "preco": "R$ 18,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-041",
+      "categoria": "DOSES",
+      "nome": "Tequila",
+      "descricao": "José Cuervo.",
+      "preco": "R$ 20,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-042",
+      "categoria": "SEM ÁLCOOL",
+      "nome": "Sodas artesanais",
+      "descricao": "Água com gás, xarope de açucar, sumo de limão e xarope de fruta. Consultar sabores ...",
+      "preco": "R$ 20,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-043",
+      "categoria": "BEBIDAS",
+      "nome": "Água",
+      "descricao": "",
+      "preco": "R$ 7,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-044",
+      "categoria": "BEBIDAS",
+      "nome": "Água com gás",
+      "descricao": "",
+      "preco": "R$ 7,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-045",
+      "categoria": "BEBIDAS",
+      "nome": "Refrigerante",
+      "descricao": "- Coca-cola/Pepsi - Guaraná Antarctica",
+      "preco": "R$ 10,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-046",
+      "categoria": "BEBIDAS",
+      "nome": "Spaten 600ml",
+      "descricao": "",
+      "preco": "R$ 20,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-047",
+      "categoria": "CALDINHOS – onde tudo começa",
+      "nome": "Feijoada",
+      "descricao": "Acompanha azeitona verde, ovo de codorna em conserva e couve frita",
+      "preco": "R$ 16,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-048",
+      "categoria": "CALDINHOS – onde tudo começa",
+      "nome": "Camarão",
+      "descricao": "Acompanha, camarões em conserva, ovo de codorna em conserva e azeitona",
+      "preco": "R$ 18,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-049",
+      "categoria": "CALDINHOS – onde tudo começa",
+      "nome": "Caldinho de Tomate assado",
+      "descricao": "Tomate assado, alho confitado. Acompanha 1 torrada de foccacia da casa",
+      "preco": "R$ 16,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-050",
+      "categoria": "NOSSAS CROQUETAS",
+      "nome": "Croquetas de Cupim (1 unid.)",
+      "descricao": "Croquetas de cupim bovino, assado e desfiado, acompanha maionese da casa e picles",
+      "preco": "R$ 18,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-051",
+      "categoria": "BATATA FRITA",
+      "nome": "Batata frita de verdade",
+      "descricao": "Com tempero da casa, acompanha ketchup da casa Batata natural, não industrializada,...",
+      "preco": "R$ 28,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-052",
+      "categoria": "BATATA FRITA",
+      "nome": "Batata da Ursa",
+      "descricao": "Com cupim desfiado, maionese de alho e Cebolinha. Batata frita de verdade, não indu...",
+      "preco": "R$ 32,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-053",
+      "categoria": "PANELINHAS",
+      "nome": "Camarão",
+      "descricao": "Camarões salteados com azeite e alho e finalizados com salsinha, acompanhados de fatias d...",
+      "preco": "R$ 58,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-054",
+      "categoria": "SANDUÍCHES",
+      "nome": "Choripán",
+      "descricao": "Linguiça suina com molho chimichurri da casa e mostarda da casa em pão francês.<...",
+      "preco": "R$ 38,00",
+      "ativo": true
+    }
+  ]
+}
