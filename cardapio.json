@@ -2,7 +2,7 @@
   "versao": 1,
   "categorias": [
     "NOVIDADES",
-    "MATINÉ ATÉ AS 20H!",
+    "SEXTA E SÁBADO MATINÉ ATÉ AS 20H!",
     "DRINKS AUTORAIS",
     "DRINKS CLÁSSICOS",
     "CAIPIRINHAS",
@@ -75,7 +75,7 @@
     },
     {
       "id": "produto-008",
-      "categoria": "MATINÉ ATÉ AS 20H!",
+      "categoria": "SEXTA E SÁBADO MATINÉ ATÉ AS 20H!",
       "nome": "CALDINHOS POR R$13",
       "descricao": "Tomate Feijoada",
       "preco": "R$ 13,00",
@@ -83,7 +83,7 @@
     },
     {
       "id": "produto-009",
-      "categoria": "MATINÉ ATÉ AS 20H!",
+      "categoria": "SEXTA E SÁBADO MATINÉ ATÉ AS 20H!",
       "nome": "Batata frita de verdade",
       "descricao": "Tradicional batata frita da casa, com paprica, acompanha ketchup da casa",
       "preco": "R$ 24,00",
@@ -91,7 +91,7 @@
     },
     {
       "id": "produto-010",
-      "categoria": "MATINÉ ATÉ AS 20H!",
+      "categoria": "SEXTA E SÁBADO MATINÉ ATÉ AS 20H!",
       "nome": "Hamburguesa",
       "descricao": "Blend artesanal de 130g de carne bovina feito na casa, queijo cheddar e pão brioche. Acompanha ketchup, mostarda e picles de pepino também produzidos artesanalmente na casa, além de cebola roxa e tomate.",
       "preco": "R$ 29,00",
@@ -99,7 +99,7 @@
     },
     {
       "id": "produto-011",
-      "categoria": "MATINÉ ATÉ AS 20H!",
+      "categoria": "SEXTA E SÁBADO MATINÉ ATÉ AS 20H!",
       "nome": "CAIPIRINHA LIMÃO",
       "descricao": "",
       "preco": "R$ 16,00",
@@ -107,7 +107,7 @@
     },
     {
       "id": "produto-012",
-      "categoria": "MATINÉ ATÉ AS 20H!",
+      "categoria": "SEXTA E SÁBADO MATINÉ ATÉ AS 20H!",
       "nome": "GIN TÔNICA",
       "descricao": "",
       "preco": "R$ 20,00",
@@ -115,7 +115,7 @@
     },
     {
       "id": "produto-013",
-      "categoria": "MATINÉ ATÉ AS 20H!",
+      "categoria": "SEXTA E SÁBADO MATINÉ ATÉ AS 20H!",
       "nome": "MOSCOW MULE",
       "descricao": "",
       "preco": "R$ 20,00",
@@ -123,7 +123,7 @@
     },
     {
       "id": "produto-014",
-      "categoria": "MATINÉ ATÉ AS 20H!",
+      "categoria": "SEXTA E SÁBADO MATINÉ ATÉ AS 20H!",
       "nome": "CROQUETAS",
       "descricao": "Consultar disponíveis",
       "preco": "R$ 15,00",
@@ -131,7 +131,7 @@
     },
     {
       "id": "produto-015",
-      "categoria": "MATINÉ ATÉ AS 20H!",
+      "categoria": "SEXTA E SÁBADO MATINÉ ATÉ AS 20H!",
       "nome": "PARMEGIANA PETISCO",
       "descricao": "Parmegiana de carne com molho de tomate da casa e queijo mussarela gratinado. Acompanha fritas da casa",
       "preco": "R$ 48,00",
@@ -448,7 +448,14 @@
       "descricao": "Linguiça suina com molho chimichurri da casa e mostarda da casa em pão francês.<...",
       "preco": "R$ 38,00",
       "ativo": true
+    },
+    {
+      "id": "produto-e2fbfb11-60d6-4e49-934d-b86580b8b771",
+      "categoria": "NOVIDADES",
+      "nome": "PIZZAS",
+      "descricao": "CONSULTE SABORES DISPONIVEIS",
+      "preco": "R$ 49,00",
+      "ativo": true
     }
   ]
 }
-
