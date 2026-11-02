@@ -1,0 +1,3 @@
+# Copie para backend/.dev.vars apenas para desenvolvimento local. Nunca faça commit de segredos.
+GITHUB_CLIENT_SECRET=SUBSTITUA_PELO_SEGREDO_DA_GITHUB_APP
+SESSION_ENCRYPTION_KEY=SUBSTITUA_POR_32_BYTES_ALEATORIOS_EM_BASE64

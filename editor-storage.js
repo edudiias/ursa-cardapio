@@ -26,11 +26,17 @@
     if (id !== null && (typeof id !== 'string' || !menu.produtos.some(product => product.id === id))) {
       throw new Error('O produto em edição no rascunho não foi encontrado.');
     }
+    let publication = null;
+    if (draft.publication !== undefined && draft.publication !== null) {
+      if (!/^[a-f0-9]{40}$/.test(draft.publication.sha || '') ||
+        draft.publication.commit !== null && !/^[a-f0-9]{40}$/.test(draft.publication.commit || '')) throw new Error('Confirmação de publicação inválida.');
+      publication = { sha: draft.publication.sha, commit: draft.publication.commit };
+    }
     return { versao: 1, menu,
       publishedBase: draft.publishedBase === null ? null : validateMenu(draft.publishedBase),
       exported: draft.exported === null ? null : validateMenu(draft.exported),
       form: { editingId: id, values: validateForm(draft.form.values), baseline: validateForm(draft.form.baseline) },
-      newCategory: draft.newCategory };
+      newCategory: draft.newCategory, ...(publication ? { publication } : {}) };
   }
 
   function createStore(getStorage, path) {

@@ -1,2 +1,10 @@
 node_modules/
 test-results/
+.wrangler/
+.pnpm-store/
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+.env
+.env.*
+!.env.example
