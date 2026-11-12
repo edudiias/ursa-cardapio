@@ -23,7 +23,7 @@
       "nome": "EMPANADA",
       "descricao": "Empanada estilo Argentina com massa feita com farinha de trigo e banha. Recheada com carne picada na ponta da faca, Sofrito, vinho e uvas passas.\nAcompanha Chimichurri da casa",
       "preco": "R$ 18,00",
-      "ativo": false
+      "ativo": true
     },
     {
       "id": "produto-002",
@@ -39,7 +39,7 @@
       "nome": "Hamburguesa",
       "descricao": "Blend artesanal de 130g de carne bovina feito na casa, queijo cheddar e pão brioche. Acompanha ketchup, mostarda e picles de pepino também produzidos artesanalmente na casa, além de cebola roxa e tomate.",
       "preco": "R$ 38,00",
-      "ativo": false
+      "ativo": true
     },
     {
       "id": "produto-004",
@@ -95,7 +95,7 @@
       "nome": "Hamburguesa",
       "descricao": "Blend artesanal de 130g de carne bovina feito na casa, queijo cheddar e pão brioche. Acompanha ketchup, mostarda e picles de pepino também produzidos artesanalmente na casa, além de cebola roxa e tomate.",
       "preco": "R$ 29,00",
-      "ativo": false
+      "ativo": true
     },
     {
       "id": "produto-011",
@@ -431,7 +431,7 @@
       "nome": "Batata da Ursa",
       "descricao": "Com cupim desfiado, maionese de alho e Cebolinha. Batata frita de verdade, não indu...",
       "preco": "R$ 32,00",
-      "ativo": false
+      "ativo": true
     },
     {
       "id": "produto-053",
@@ -456,6 +456,46 @@
       "descricao": "CONSULTE SABORES DISPONIVEIS",
       "preco": "R$ 49,00",
       "ativo": false
+    },
+    {
+      "id": "produto-c92cce00-e40a-4988-bfc4-4d4330574924",
+      "categoria": "NOVIDADES",
+      "nome": "Espetinho Bananinha",
+      "descricao": "Filé de costela (bananinha) na brasa, acompanha farofa e vinagrete",
+      "preco": "R$ 20,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-3e33f4bc-3c72-499c-821b-506383c1e8e3",
+      "categoria": "NOVIDADES",
+      "nome": "Espetinho de Cupim com cebola",
+      "descricao": "Cubos de cupim assado intercalado com cebola, finalizado na brasa, acompanha farofa e vinagrete.",
+      "preco": "R$ 24,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-335d2323-aaf2-4c12-9e16-6828f1a2ecb9",
+      "categoria": "NOVIDADES",
+      "nome": "Espetinho de Sobrecoxa de frango",
+      "descricao": "Sobrecoxa de frango desossada, na brasa. Acompanha farofa e vinagrete",
+      "preco": "R$ 20,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-e7b89bfe-ee85-45cd-8f79-dcac1f3c048c",
+      "categoria": "NOVIDADES",
+      "nome": "Espetinho de Coração de galinha",
+      "descricao": "Coração de galinha marinado, assado na brasa. Acompanha farofa e vinagrete",
+      "preco": "R$ 18,00",
+      "ativo": true
+    },
+    {
+      "id": "produto-ec7a2735-a0fb-4910-bc10-2a59d5d42f97",
+      "categoria": "NOVIDADES",
+      "nome": "Pão de Alho",
+      "descricao": "Pão francês, creme de alho com queijos muçarela, azul e parmesão. Finalizado na brasa",
+      "preco": "R$ 15,00",
+      "ativo": true
     }
   ]
 }
