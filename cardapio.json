@@ -2,7 +2,7 @@
   "versao": 1,
   "categorias": [
     "NOVIDADES",
-    "PIRANGUEIRA, A NOITE TODA!",
+    "MATINÉ, SEXTA E SÁBADO ATÉ AS 20H",
     "DRINKS AUTORAIS",
     "DRINKS CLÁSSICOS",
     "CAIPIRINHAS",
@@ -23,7 +23,7 @@
       "nome": "EMPANADA",
       "descricao": "Empanada estilo Argentina com massa feita com farinha de trigo e banha. Recheada com carne picada na ponta da faca, Sofrito, vinho e uvas passas.\nAcompanha Chimichurri da casa",
       "preco": "R$ 18,00",
-      "ativo": true
+      "ativo": false
     },
     {
       "id": "produto-002",
@@ -75,7 +75,7 @@
     },
     {
       "id": "produto-008",
-      "categoria": "PIRANGUEIRA, A NOITE TODA!",
+      "categoria": "MATINÉ, SEXTA E SÁBADO ATÉ AS 20H",
       "nome": "CALDINHOS POR R$13",
       "descricao": "Tomate Feijoada",
       "preco": "R$ 13,00",
@@ -83,7 +83,7 @@
     },
     {
       "id": "produto-009",
-      "categoria": "PIRANGUEIRA, A NOITE TODA!",
+      "categoria": "MATINÉ, SEXTA E SÁBADO ATÉ AS 20H",
       "nome": "Batata frita de verdade",
       "descricao": "Tradicional batata frita da casa, com paprica, acompanha ketchup da casa",
       "preco": "R$ 24,00",
@@ -91,7 +91,7 @@
     },
     {
       "id": "produto-010",
-      "categoria": "PIRANGUEIRA, A NOITE TODA!",
+      "categoria": "MATINÉ, SEXTA E SÁBADO ATÉ AS 20H",
       "nome": "Hamburguesa",
       "descricao": "Blend artesanal de 130g de carne bovina feito na casa, queijo cheddar e pão brioche. Acompanha ketchup, mostarda e picles de pepino também produzidos artesanalmente na casa, além de cebola roxa e tomate.",
       "preco": "R$ 29,00",
@@ -99,7 +99,7 @@
     },
     {
       "id": "produto-011",
-      "categoria": "PIRANGUEIRA, A NOITE TODA!",
+      "categoria": "MATINÉ, SEXTA E SÁBADO ATÉ AS 20H",
       "nome": "CAIPIRINHA LIMÃO",
       "descricao": "",
       "preco": "R$ 16,00",
@@ -107,7 +107,7 @@
     },
     {
       "id": "produto-012",
-      "categoria": "PIRANGUEIRA, A NOITE TODA!",
+      "categoria": "MATINÉ, SEXTA E SÁBADO ATÉ AS 20H",
       "nome": "GIN TÔNICA",
       "descricao": "",
       "preco": "R$ 20,00",
@@ -115,7 +115,7 @@
     },
     {
       "id": "produto-013",
-      "categoria": "PIRANGUEIRA, A NOITE TODA!",
+      "categoria": "MATINÉ, SEXTA E SÁBADO ATÉ AS 20H",
       "nome": "MOSCOW MULE",
       "descricao": "",
       "preco": "R$ 20,00",
@@ -123,7 +123,7 @@
     },
     {
       "id": "produto-014",
-      "categoria": "PIRANGUEIRA, A NOITE TODA!",
+      "categoria": "MATINÉ, SEXTA E SÁBADO ATÉ AS 20H",
       "nome": "CROQUETAS",
       "descricao": "Consultar disponíveis",
       "preco": "R$ 15,00",
@@ -131,7 +131,7 @@
     },
     {
       "id": "produto-015",
-      "categoria": "PIRANGUEIRA, A NOITE TODA!",
+      "categoria": "MATINÉ, SEXTA E SÁBADO ATÉ AS 20H",
       "nome": "PARMEGIANA PETISCO",
       "descricao": "Parmegiana de carne com molho de tomate da casa e queijo mussarela gratinado. Acompanha fritas da casa",
       "preco": "R$ 48,00",
@@ -463,7 +463,7 @@
       "nome": "Espetinho Bananinha",
       "descricao": "Filé de costela (bananinha) na brasa, acompanha farofa e vinagrete",
       "preco": "R$ 20,00",
-      "ativo": true
+      "ativo": false
     },
     {
       "id": "produto-3e33f4bc-3c72-499c-821b-506383c1e8e3",
@@ -471,7 +471,7 @@
       "nome": "Espetinho de Cupim com cebola",
       "descricao": "Cubos de cupim assado intercalado com cebola, finalizado na brasa, acompanha farofa e vinagrete.",
       "preco": "R$ 24,00",
-      "ativo": true
+      "ativo": false
     },
     {
       "id": "produto-335d2323-aaf2-4c12-9e16-6828f1a2ecb9",
@@ -479,7 +479,7 @@
       "nome": "Espetinho de Sobrecoxa de frango",
       "descricao": "Sobrecoxa de frango desossada, na brasa. Acompanha farofa e vinagrete",
       "preco": "R$ 20,00",
-      "ativo": true
+      "ativo": false
     },
     {
       "id": "produto-e7b89bfe-ee85-45cd-8f79-dcac1f3c048c",
@@ -487,7 +487,7 @@
       "nome": "Espetinho de Coração de galinha",
       "descricao": "Coração de galinha marinado, assado na brasa. Acompanha farofa e vinagrete",
       "preco": "R$ 18,00",
-      "ativo": true
+      "ativo": false
     },
     {
       "id": "produto-ec7a2735-a0fb-4910-bc10-2a59d5d42f97",
@@ -495,7 +495,7 @@
       "nome": "Pão de Alho",
       "descricao": "Pão francês, creme de alho com queijos muçarela, azul e parmesão. Finalizado na brasa",
       "preco": "R$ 15,00",
-      "ativo": true
+      "ativo": false
     }
   ]
 }
