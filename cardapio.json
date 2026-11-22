@@ -455,7 +455,7 @@
       "nome": "PIZZAS",
       "descricao": "CONSULTE SABORES DISPONIVEIS",
       "preco": "R$ 49,00",
-      "ativo": false
+      "ativo": true
     },
     {
       "id": "produto-c92cce00-e40a-4988-bfc4-4d4330574924",
