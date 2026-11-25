@@ -1,6 +1,20 @@
-# Cardápio do Ursa Bar — editor 1.0
+# Cardápio do Ursa Bar — editor 1.1
 
 O cardápio público continua em `index.html`, com o mesmo visual e endereço. O QR Code existente continua válido. Os 54 produtos originais foram extraídos para `cardapio.json`, preservando nomes, descrições, categorias, preços e ordem. Todos começam ativos; o item originalmente sem preço continua mostrando **Consulte**.
+
+A versão 1.1 adiciona publicação direta com GitHub OAuth e Cloudflare Workers. **Neste PR, a publicação vem desabilitada e o backend não foi implantado.** A edição local, recuperação de rascunhos e exportação funcionam sem configurar contas. Consulte o [passo a passo para Windows/PowerShell](docs/IMPLANTACAO-WINDOWS.md) antes de habilitar o serviço.
+
+## Publicar diretamente pelo editor, depois da configuração
+
+1. Clique em **Entrar com GitHub**. Na janela segura, autorize a GitHub App com a conta `edudiias`. Se o navegador separar a janela durante o login, volte ao editor e clique novamente em **Entrar com GitHub** para reconectar; o rascunho é preservado.
+2. Edite e salve os produtos normalmente. Clique em **Publicar alterações**. Um formulário preenchido será validado e salvo antes de abrir a revisão.
+3. Confira os dados e o destino na janela segura e clique em **Confirmar publicação**. Apenas `cardapio.json` de `edudiias/ursa-cardapio`, em `main`, pode ser atualizado pela API.
+4. Aguarde a mensagem de commit criado. **O GitHub Pages ainda poderá estar atualizando:** confirme o resultado no endereço público habitual antes de considerar a mudança visível aos clientes.
+5. Use **Sair** para encerrar a sessão de publicação neste editor. Isso não apaga o rascunho nem encerra a conta GitHub em outros sites. Sessões duram no máximo uma hora; se expirarem, entre novamente.
+
+Uma publicação recusada ou sem resposta mantém o trabalho local. Se a resposta for incerta, consulte o histórico de commits antes de tentar novamente. Se o arquivo remoto tiver mudado, o editor não sobrescreve: use **Revisar versão do GitHub no editor** e escolha entre recuperar o rascunho para revisão ou carregar o remoto. Recuperar não combina automaticamente as versões; revise os dados antes de confirmar outro envio. **Exportar cardapio.json** continua disponível como backup e alternativa manual.
+
+Se o commit for confirmado antes de o Pages atualizar, uma cópia local com a confirmação é mantida. Ao recarregar nesse intervalo, o editor avisa da diferença; recupere o rascunho para manter os dados recém-publicados. Alterações feitas durante o envio continuam pendentes e não são apagadas pela confirmação do snapshot anterior.
 
 ## Usar o editor
 
@@ -27,9 +41,9 @@ O indicador **“Alterações salvas neste dispositivo — publicação pendente
 
 Mantenha uma cópia exportada como backup: limpar os dados do navegador, usar outro perfil/endereço ou encerrar uma sessão anônima pode remover ou deixar inacessível o rascunho. Ele não é sincronizado entre dispositivos. Se o navegador bloquear o armazenamento ou atingir o limite de espaço, o editor mostra um aviso de falha e permite exportar; nesse caso, não atualize ou feche antes de baixar um backup. O aviso de saída é uma proteção adicional e pode não aparecer em celulares.
 
-## Publicar sem mudar o endereço ou o QR Code
+## Alternativa manual de publicação
 
-O editor é local e **não possui autenticação**: qualquer visitante pode abrir a página e editar sua própria cópia. Ele não grava no servidor, não faz login e não acessa a API do GitHub. Somente alguém autorizado no repositório pode publicar. Não coloque senhas, tokens ou informações confidenciais no editor ou no JSON; os arquivos do site são públicos.
+A edição local pode ser aberta por qualquer visitante. A publicação direta exige autenticação e autorização verificadas no backend; nenhum token GitHub chega ao JavaScript do editor. Se preferir não configurar o backend ou se o serviço estiver indisponível, alguém autorizado no repositório pode publicar manualmente. Não coloque senhas, tokens ou informações confidenciais no editor ou no JSON; os arquivos do site são públicos.
 
 1. Exporte o arquivo e guarde uma cópia do `cardapio.json` atualmente publicado como backup.
 2. No GitHub, abra `edudiias/ursa-cardapio` e crie uma **nova branch a partir de `main`**.
@@ -37,7 +51,7 @@ O editor é local e **não possui autenticação**: qualquer visitante pode abri
 4. Abra um Pull Request para `main`. Confira as diferenças de produtos, preços e categorias e valide a branch conforme a seção seguinte. Peça a revisão de uma pessoa autorizada.
 5. Após aprovação, essa pessoa pode mesclar o PR. Aguarde a publicação existente do GitHub Pages e confira o endereço público habitual, inclusive pelo QR Code atual.
 
-Não renomeie `index.html`, não altere a configuração de endereço do GitHub Pages, não crie outro site e não gere outro QR Code. O editor 1.0 não exige backend, build ou alteração da configuração de publicação. Para desfazer uma atualização de dados, publique o backup do JSON pelo mesmo processo de branch e PR.
+Não renomeie `index.html`, não altere a configuração de endereço do GitHub Pages e não gere outro QR Code. O cardápio público não exige backend nem build. O Worker separado atende somente autenticação e publicação. Para desfazer uma atualização de dados, importe e revise um backup antes de publicá-lo, ou publique-o manualmente por branch e PR.
 
 ## Validar antes de publicar
 
@@ -66,21 +80,32 @@ Abra [o cardápio local](http://127.0.0.1:8000/) e [o editor local](http://127.0
 O site não tem dependências externas em produção. Os testes de dados usam Node.js 22 ou superior e não precisam de instalação:
 
 ```sh
-node --test tests/menu.test.cjs tests/storage.test.cjs
+node --test tests/*.test.cjs
 ```
 
 Os testes em navegador usam Playwright somente em desenvolvimento:
 
 ```sh
-npm install
-npx playwright install chromium
-npm test
-npm run test:browser
+npx --yes pnpm@11.25.0 install --frozen-lockfile
+npx pnpm@11.25.0 exec playwright install chromium
+npx pnpm@11.25.0 test
+npx pnpm@11.25.0 test:browser
 ```
 
 Opcionalmente use um navegador instalado: `BROWSER_CHANNEL=msedge` ou `BROWSER_CHANNEL=chrome` (no PowerShell: `$env:BROWSER_CHANNEL='msedge'`). A comparação visual usa o `index.html` original do commit `4f7adab`, portanto mantenha esse commit no histórico local; em clones rasos, baixe o histórico antes do teste.
 
-As suítes de navegador servem o projeto em `/ursa-cardapio/`, como no GitHub Pages. Verificam carregamento e igualdade visual com o original, edição, inclusão, exclusão confirmada/cancelada, pausa/ativação, categorias, importação/exportação, texto literal com HTML, falhas de carregamento e tela móvel de 390 px. Os testes de persistência cobrem atualização sem cache, reabertura, formulário incompleto, mudanças de categorias, importação, descarte confirmado/cancelado, nova versão publicada, falhas de armazenamento e recuperação de rascunhos. As capturas ficam em `test-results/` (fora do Git).
+As suítes de navegador servem o projeto em `/ursa-cardapio/`, como no GitHub Pages. Verificam o visual público original, edição, validação, importação/exportação, recuperação e tela móvel. A suíte de publicação usa domínios HTTPS interceptados e **GitHub inteiramente simulado**: nenhum token real, commit remoto ou deploy é feito. Cobre OAuth, cookies, confirmação, sucesso, conflito, falha, expiração de sessão e novas edições durante o envio. Os testes de backend também verificam autorização em cada publicação, CSRF, SHA e destino fixo. Capturas e builds ficam em `test-results/` (fora do Git).
+
+## Arquitetura e segurança da publicação
+
+- **Cloudflare Worker + GitHub App OAuth:** Authorization Code com PKCE S256 e `state` de uso único. A GitHub App deve ser instalada somente neste repositório, com `Contents: read and write`; `Metadata: read` é a permissão obrigatória implícita. Não há escopo OAuth amplo `repo`, PAT ou chave privada de instalação.
+- **Sessões:** identificador aleatório em cookie `__Host-`, `HttpOnly`, `Secure`, `SameSite=Lax`; token OAuth criptografado com AES-GCM no backend, expiração máxima de uma hora, sem refresh automático. Estado OAuth e sessões ficam em Durable Object com armazenamento transacional e limpeza por alarmes. Segredos só em Workers Secrets.
+- **Janela segura:** autenticação e requisições autenticadas acontecem no próprio domínio do Worker, como navegação de primeiro nível. A página do GitHub Pages mantém seu localStorage. `postMessage` aceita somente a origem configurada, a janela esperada e o identificador daquela abertura; não transmite token ou cookie ao editor. Isso evita depender de cookies de terceiros entre `github.io` e `workers.dev`.
+- **API:** CORS concede somente a origem exata do cardápio, sem wildcard. Requisições de escrita exigem origem autorizada e token CSRF da sessão. A origem do próprio Worker atende a janela por same-origin. Identidade GitHub (`edudiias`, ID `175474516`) é conferida no servidor em cada publicação.
+- **Destino fixo:** repositório, arquivo e branch são constantes do servidor; o cliente envia somente menu e SHA. Validação é compartilhada com o cardápio, com limite de 512 KB por requisição, até 100 categorias e 2.000 produtos. A comparação de SHA antes do PUT e o SHA exigido pelo GitHub protegem contra concorrência, sem tentativa de sobrescrever ou forçar alterações.
+- **Operação:** `PUBLISH_ENABLED=false` é o padrão. Não há workflow de deploy automático. A GitHub App não deve receber bypass de regras de `main`: se uma regra impedir o commit, a API deve falhar e a exportação permanece disponível.
+
+Fontes oficiais consultadas: [OAuth de GitHub Apps](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-user-access-token-for-a-github-app), [PKCE](https://github.blog/changelog/2025-07-14-pkce-support-for-oauth-and-github-app-authentication/), [API de Contents e SHA](https://docs.github.com/en/rest/repos/contents#create-or-update-file-contents), [Workers Secrets](https://developers.cloudflare.com/workers/configuration/secrets/), [Durable Objects SQLite](https://developers.cloudflare.com/durable-objects/api/sqlite-storage-api/) e [assets do Worker](https://developers.cloudflare.com/workers/static-assets/binding/).
 
 ## Formato de `cardapio.json`
 

@@ -8,20 +8,33 @@
   <link rel="stylesheet" href="editor.css">
   <script src="menu-data.js" defer></script>
   <script src="editor-storage.js" defer></script>
+  <script src="editor-config.js" defer></script>
+  <script src="editor-publish.js" defer></script>
   <script src="editor.js" defer></script>
 </head>
 <body>
   <header class="container">
     <span class="brand">URSA</span>
-    <h1>Editor do cardápio <small>1.0</small></h1>
+    <h1>Editor do cardápio <small>1.1</small></h1>
     <p>Edite os produtos, salve cada edição e exporte o arquivo ao terminar.</p>
     <a href="./index.html" target="_blank" rel="noopener">Abrir cardápio público ↗</a>
-    <aside class="notice"><strong>Editor local, sem autenticação.</strong> Qualquer pessoa pode abrir esta página e editar sua própria cópia. As alterações são salvas automaticamente neste navegador e dispositivo, sem mudar o site público. Não insira senhas ou tokens. Para publicar, exporte o JSON e peça a uma pessoa autorizada para atualizar o arquivo no GitHub.</aside>
+    <aside class="notice"><strong>Edição local sem autenticação; publicação protegida pelo GitHub.</strong> Qualquer pessoa pode editar sua própria cópia neste dispositivo. Somente edudiias pode publicar, após entrar com GitHub e confirmar na janela segura. Não insira senhas ou tokens neste editor. A exportação manual continua disponível.</aside>
   </header>
   <main class="container">
     <p id="message" role="status" aria-live="polite">Carregando cardápio…</p>
     <noscript>Ative o JavaScript para usar o editor.</noscript>
     <p id="local-status" class="notice" role="status" aria-live="polite">Verificando o rascunho deste dispositivo…</p>
+    <section class="panel" aria-labelledby="publish-title">
+      <h2 id="publish-title">Publicação no GitHub</h2>
+      <p id="auth-status" role="status">Verificando configuração…</p>
+      <div class="actions">
+        <button type="button" id="github-login">Entrar com GitHub</button>
+        <button type="button" id="github-logout" disabled>Sair</button>
+        <button type="button" id="publish" class="primary" disabled>Publicar alterações</button>
+      </div>
+      <p id="publish-status" role="status" aria-live="polite"></p>
+      <p class="hint">A publicação abre uma janela segura para confirmar a atualização. O GitHub Pages pode levar um tempo para exibir o commit criado. Seu rascunho continua salvo se ocorrer uma falha.</p>
+    </section>
     <section id="recovery" class="panel" aria-labelledby="recovery-title" hidden>
       <h2 id="recovery-title">Há um trabalho salvo neste dispositivo</h2>
       <p id="recovery-message"></p>
