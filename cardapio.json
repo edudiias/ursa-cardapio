@@ -39,7 +39,7 @@
       "nome": "Hamburguesa",
       "descricao": "Blend artesanal de 130g de carne bovina feito na casa, queijo cheddar e pão brioche. Acompanha ketchup, mostarda e picles de pepino também produzidos artesanalmente na casa, além de cebola roxa e tomate.",
       "preco": "R$ 38,00",
-      "ativo": true
+      "ativo": false
     },
     {
       "id": "produto-004",
