@@ -47,7 +47,7 @@
       "nome": "PARMEGIANA PETISCO",
       "descricao": "Parmegiana de carne com molho de tomate da casa e queijo mussarela gratinado. Acompanha fritas da casa.",
       "preco": "R$ 60,00",
-      "ativo": true
+      "ativo": false
     },
     {
       "id": "produto-005",
@@ -71,7 +71,7 @@
       "nome": "Dupla de pasteis",
       "descricao": "2 pastéis, sabor creme de milho com mussarela e gorgonzola.",
       "preco": "R$ 18,00",
-      "ativo": true
+      "ativo": false
     },
     {
       "id": "produto-008",
@@ -87,7 +87,7 @@
       "nome": "Batata frita de verdade",
       "descricao": "Tradicional batata frita da casa, com paprica, acompanha ketchup da casa",
       "preco": "R$ 24,00",
-      "ativo": true
+      "ativo": false
     },
     {
       "id": "produto-010",
@@ -95,7 +95,7 @@
       "nome": "Hamburguesa",
       "descricao": "Blend artesanal de 130g de carne bovina feito na casa, queijo cheddar e pão brioche. Acompanha ketchup, mostarda e picles de pepino também produzidos artesanalmente na casa, além de cebola roxa e tomate.",
       "preco": "R$ 29,00",
-      "ativo": true
+      "ativo": false
     },
     {
       "id": "produto-011",
@@ -127,7 +127,7 @@
       "nome": "CROQUETAS",
       "descricao": "Consultar disponíveis",
       "preco": "R$ 15,00",
-      "ativo": true
+      "ativo": false
     },
     {
       "id": "produto-015",
@@ -135,7 +135,7 @@
       "nome": "PARMEGIANA PETISCO",
       "descricao": "Parmegiana de carne com molho de tomate da casa e queijo mussarela gratinado. Acompanha fritas da casa",
       "preco": "R$ 48,00",
-      "ativo": true
+      "ativo": false
     },
     {
       "id": "produto-016",
@@ -391,7 +391,7 @@
       "nome": "Feijoada",
       "descricao": "Acompanha azeitona verde, ovo de codorna em conserva e couve frita",
       "preco": "R$ 16,00",
-      "ativo": true
+      "ativo": false
     },
     {
       "id": "produto-048",
@@ -399,7 +399,7 @@
       "nome": "Camarão",
       "descricao": "Acompanha, camarões em conserva, ovo de codorna em conserva e azeitona",
       "preco": "R$ 18,00",
-      "ativo": true
+      "ativo": false
     },
     {
       "id": "produto-049",
@@ -407,7 +407,7 @@
       "nome": "Caldinho de Tomate assado",
       "descricao": "Tomate assado, alho confitado. Acompanha 1 torrada de foccacia da casa",
       "preco": "R$ 16,00",
-      "ativo": true
+      "ativo": false
     },
     {
       "id": "produto-050",
@@ -415,7 +415,7 @@
       "nome": "Croquetas de Cupim (1 unid.)",
       "descricao": "Croquetas de cupim bovino, assado e desfiado, acompanha maionese da casa e picles",
       "preco": "R$ 18,00",
-      "ativo": true
+      "ativo": false
     },
     {
       "id": "produto-051",
@@ -423,7 +423,7 @@
       "nome": "Batata frita de verdade",
       "descricao": "Com tempero da casa, acompanha ketchup da casa Batata natural, não industrializada,...",
       "preco": "R$ 28,00",
-      "ativo": true
+      "ativo": false
     },
     {
       "id": "produto-052",
@@ -431,7 +431,7 @@
       "nome": "Batata da Ursa",
       "descricao": "Com cupim desfiado, maionese de alho e Cebolinha. Batata frita de verdade, não indu...",
       "preco": "R$ 32,00",
-      "ativo": true
+      "ativo": false
     },
     {
       "id": "produto-053",
@@ -439,7 +439,7 @@
       "nome": "Camarão",
       "descricao": "Camarões salteados com azeite e alho e finalizados com salsinha, acompanhados de fatias d...",
       "preco": "R$ 58,00",
-      "ativo": true
+      "ativo": false
     },
     {
       "id": "produto-054",
@@ -447,7 +447,7 @@
       "nome": "Choripán",
       "descricao": "Linguiça suina com molho chimichurri da casa e mostarda da casa em pão francês.<...",
       "preco": "R$ 38,00",
-      "ativo": true
+      "ativo": false
     },
     {
       "id": "produto-e2fbfb11-60d6-4e49-934d-b86580b8b771",
@@ -463,7 +463,7 @@
       "nome": "Espetinho Bananinha",
       "descricao": "Filé de costela (bananinha) na brasa, acompanha farofa e vinagrete",
       "preco": "R$ 20,00",
-      "ativo": false
+      "ativo": true
     },
     {
       "id": "produto-3e33f4bc-3c72-499c-821b-506383c1e8e3",
@@ -471,7 +471,7 @@
       "nome": "Espetinho de Cupim com cebola",
       "descricao": "Cubos de cupim assado intercalado com cebola, finalizado na brasa, acompanha farofa e vinagrete.",
       "preco": "R$ 24,00",
-      "ativo": false
+      "ativo": true
     },
     {
       "id": "produto-335d2323-aaf2-4c12-9e16-6828f1a2ecb9",
@@ -479,7 +479,7 @@
       "nome": "Espetinho de Sobrecoxa de frango",
       "descricao": "Sobrecoxa de frango desossada, na brasa. Acompanha farofa e vinagrete",
       "preco": "R$ 20,00",
-      "ativo": false
+      "ativo": true
     },
     {
       "id": "produto-e7b89bfe-ee85-45cd-8f79-dcac1f3c048c",
@@ -487,7 +487,7 @@
       "nome": "Espetinho de Coração de galinha",
       "descricao": "Coração de galinha marinado, assado na brasa. Acompanha farofa e vinagrete",
       "preco": "R$ 18,00",
-      "ativo": false
+      "ativo": true
     },
     {
       "id": "produto-ec7a2735-a0fb-4910-bc10-2a59d5d42f97",
@@ -495,7 +495,7 @@
       "nome": "Pão de Alho",
       "descricao": "Pão francês, creme de alho com queijos muçarela, azul e parmesão. Finalizado na brasa",
       "preco": "R$ 15,00",
-      "ativo": false
+      "ativo": true
     }
   ]
 }
